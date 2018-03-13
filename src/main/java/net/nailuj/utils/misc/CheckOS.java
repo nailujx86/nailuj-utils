@@ -22,7 +22,7 @@ package net.nailuj.utils.misc;
  */
 public class CheckOS {
 
-    private static String OS = System.getProperty("os.name").toLowerCase();
+    private static final String OS = System.getProperty("os.name").toLowerCase();
 
     public static String getOS() {
         return OS;

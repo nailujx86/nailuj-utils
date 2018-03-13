@@ -32,7 +32,7 @@ import java.awt.image.RGBImageFilter;
  */
 public class HueFilter extends RGBImageFilter {
 
-    private float hsbvals[] = new float[3];
+    private final float hsbvals[] = new float[3];
     float fgHue;
     float fgSaturation;
     float fgBrightness;
@@ -45,6 +45,7 @@ public class HueFilter extends RGBImageFilter {
         canFilterIndexColorModel = true;
     }
 
+    @Override
     public int filterRGB(int x, int y, int rgb) {
         int alpha = (rgb >> 24) & 0xff;
         int red = (rgb >> 16) & 0xff;
